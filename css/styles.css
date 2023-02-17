@@ -128,7 +128,7 @@ h2 span {
 @media screen and (max-width: 1024px) {
     .topnav.responsive {
         position: sticky;
-        height: 312px;
+        height: 208px;
     }
     .topnav.responsive a.icon {
         position: absolute;
