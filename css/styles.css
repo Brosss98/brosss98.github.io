@@ -249,8 +249,43 @@ div.img-description p {
     margin: 0px auto;
 }
 
-.tick text {
+.parameter-value path {
+    transform: rotate(180deg) !important;
+}
+
+.parameter-value text {
+    transform: translate(0px, -54px) !important;
+}
+
+.parameter-value text, .slider-index .tick text {
     opacity: 1 !important;
+    font-family: "Fira Sans, sans-serif" !important;
+    font-size: 12px !important;
+
+}
+
+.legendCells .cell .label {
+    transform: translate(10px, 5px) !important;
+}
+
+.slider-container {
+    position: relative;
+  }
+  
+.slider-index {
+    margin-bottom: 0px;
+}
+  
+.play-button {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.25vw;
+    color: #555;
 }
 
 /* END - MAP ONLY */

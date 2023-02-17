@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Fira+Sans">
     <script src="js/d3.v7.min.js"></script>
+    <script src="js/d3-legend.js"></script>
     <script src="js/d3-simple-slider.min.js"></script>
     <script src="js/init.js"></script>
 </head>
@@ -21,8 +22,8 @@
 
     <!-- HEADER -->
     <header class="padding-header">
-        <h1>Life expectancy in the world: are we all equal?</h1>
-        <h3>UmpaLumpas Group - Data Visualization Final Project<br>Marchi and Medone</h3>
+        <h1>Life expectancy in the world: how is it going?</h1>
+        <h3>Data Visualization Final Project<br>Mario Medone</h3>
     </header>
 
     <!-- NAVIGATION MENU -->
@@ -40,18 +41,19 @@
 
     <!-- MAIN CONTENT -->
     <div id="main-content" class="content">
-        
+
         <!-- MAP OF LIFE EXPECTANCY IN THE WORLD -->
         <div id="map-life-expectancy-world" class="map"></div>
-        <div id="slider-map-life-expectancy-world" class="slider-index"></div>
-        <button id="map-play-pause">Play</button>
-        
+        <div class="slider-container">
+            <div id="slider-map-life-expectancy-world" class="slider-index"></div>
+            <button id="map-play-pause" class="play-button"><i class="fa fa-play"></i></button>
+        </div>
+
         <!-- INTRODUCTION -->
+        <div class="section"></div>
         <div id="introduction" class="section">
-            
-            <h3>Map of life expectancy in the World over year</h3>
             <p>
-                --- WRITE COMMENT AND INTRODUCTION ---
+                Over the years
             </p>
         </div>
 
@@ -60,7 +62,7 @@
 
     <!-- FOOTER -->
     <footer>
-        <div class="text-center font-italic">&copy; Copyright UmpaLumpas 2023</div>
+        <div class="text-center font-italic">&copy; Copyright Mario Medone 2023</div>
     </footer>
 
     <!-- Put here the js for the chart -->
