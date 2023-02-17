@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <!-- To manage incompatibility with older version of Internet Explorer / Edge -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- To manage the text respect to the device of the user (mobile, tablet, pc, and so on) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Life expectancy in the world</title>
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Fira+Sans">
+    <script src="js/d3.v7.min.js"></script>
+    <script src="js/d3-simple-slider.min.js"></script>
+    <script src="js/init.js"></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="padding-header">
+        <h1>Life expectancy in the world: are we all equal?</h1>
+        <h3>UmpaLumpas Group - Data Visualization Final Project<br>Marchi and Medone</h3>
+    </header>
+
+    <!-- NAVIGATION MENU -->
+    <div id="myTopnav" class="topnav stickyNav">
+        <div class="content">
+            <a href="#" class="active">Home</a>
+            <a href="mortality.html">Mortality</a>
+            <a href="death-causes.html">Death causes</a>
+            <a href="health-GDP.html">Health GDP</a>
+            <a href="javascript:void(0);" class="icon" onclick="toggle_icon_menu_topnav()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main-content" class="content">
+        
+        <!-- MAP OF LIFE EXPECTANCY IN THE WORLD -->
+        <div id="map-life-expectancy-world" class="map"></div>
+        <div id="slider-map-life-expectancy-world" class="slider-index"></div>
+        <button id="map-play-pause">Play</button>
+        
+        <!-- INTRODUCTION -->
+        <div id="introduction" class="section">
+            
+            <h3>Map of life expectancy in the World over year</h3>
+            <p>
+                --- WRITE COMMENT AND INTRODUCTION ---
+            </p>
+        </div>
+
+    <!-- END OF MAIN CONTENT -->
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="text-center font-italic">&copy; Copyright UmpaLumpas 2023</div>
+    </footer>
+
+    <!-- Put here the js for the chart -->
+    <script src="js/map-life-expectancy-world.js"></script>
+
+</body>
+
+</html>
