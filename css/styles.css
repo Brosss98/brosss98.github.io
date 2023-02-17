@@ -16,22 +16,22 @@ body {
 
 /** HEADER **/
 header {
-    background-color: #008dc9;
+    background-color: #90e0ef;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
 header h1 {
     font-family: "Roboto Slab", sans-serif;
-    color : #181935;
+    color : #023e8a;
     text-align: center;
-    font-size: 36px;
+    font-size: 42px;
 }
 
 header h3 {
     font-family: "Roboto Slab", sans-serif;
     text-align: center;
-    font-size: 18px;
+    font-size: 24px;
 }
 
 /** CONTENTS OF PAGE **/
@@ -95,7 +95,7 @@ h2 span {
 
 /* Add an active class to highlight the current page */
 .topnav a.active {
-    background-color: #181935;
+    background-color: #023e8a;
     color: white;
 }
 
@@ -161,7 +161,7 @@ h2 span {
 .section {
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
     text-align: center;
     max-width: 75ch;
 }
@@ -172,29 +172,29 @@ h2 span {
 
 /** PARAGRAPH **/
 p {
-    text-align: justify;
+    text-align: left;
 }
 
 /** LINKS **/
 /* unvisited link */
 p a:link {
-    color: #008dc9;
+    color: #90e0ef;
 }
   
   /* visited link */
 p a:visited {
-    color: #181935;
+    color: #023e8a;
 }
   
   /* mouse over link */
 p a:hover {
     color: black;
-    background-color: #008dc9;
+    background-color: #90e0ef;
 }
   
   /* selected link */
 p a:active {
-    color: #008dc9;
+    color: #90e0ef;
     background-color: white;
 }
 
@@ -246,7 +246,6 @@ div.img-description p {
 
 .slider-index {
     text-align: center;
-    margin: 0px auto;
 }
 
 .parameter-value path {
@@ -270,6 +269,8 @@ div.img-description p {
 
 .slider-container {
     position: relative;
+    margin: auto;
+    padding-bottom: 50px;
   }
   
 .slider-index {
@@ -354,7 +355,7 @@ hr {
     margin-top: 20px;
     margin-bottom: 20px;
     border: 0;
-    border-top: 1px solid #008dc9;
+    border-top: 1px solid #90e0ef;
     opacity: 0.5;
 }
 
@@ -364,6 +365,6 @@ footer {
     top: 100%;
     width: 100%;
     padding: 10px;
-    color: #181935;
-    background-color: #008dc9;
+    color: #023e8a;
+    background-color: #90e0ef;
 }
