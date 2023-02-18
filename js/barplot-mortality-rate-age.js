@@ -11,8 +11,11 @@ const margin_3 = {top: 40, right: 20, bottom: 70, left: 70},
 // append the svg object to the body of the page
 const svg_3 = d3.select(id_ref_3)
   .append("svg")
-    .attr("width", width_3 + margin_3.left + margin_3.right)
-    .attr("height", height_3 + margin_3.top + margin_3.bottom)
+  .attr("preserveAspectRatio", "xMidYMid meet")
+  //.attr("width", width_3 + margin_3.left + margin_3.right)
+  //.attr("height", height_3 + margin_3.top + margin_3.bottom)
+  .attr("viewBox", '0 0 ' + (width_3 + margin_3.left + margin_3.right) +
+      ' ' + (height_3 + margin_3.top + margin_3.bottom))
   .append("g")
     .attr("transform",`translate(${margin_3.left},${margin_3.top})`);
 
