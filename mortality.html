@@ -66,38 +66,76 @@
 
         </div>
 
-    <!-- BOXPLOT OF MORTALITY RATE -->
-    <div id="boxplot-mortality-rate" class="chart"></div>
-    <div class="slider-container">
-        <div id="slider-boxplot-mortality-rate" class="slider-index"></div>
-        <button id="boxplot-play-pause" class="play-button"><i class="fa fa-play"></i></button>
+        <!-- BOXPLOT OF MORTALITY RATE -->
+        <div id="boxplot-mortality-rate" class="chart"></div>
+        <div class="slider-container">
+            <div id="slider-boxplot-mortality-rate" class="slider-index"></div>
+            <button id="boxplot-play-pause" class="play-button"><i class="fa fa-play"></i></button>
+        </div>
+
+        <!-- COMMENT TO BOXPLOT -->
+        <div id="comment-boxplot-mortality-rate" class="section">
+
+            <p>
+                The boxplot of mortality rates across continents offers a clear and concise way to visualize changes in mortality over time.
+                One striking observation is the general decrease in mortality rates across all continents, reflecting progress made in public
+                health interventions and healthcare access globally. Additionally, there is a notable decrease in the variability of mortality
+                rates within each continent, indicating how an attempt has been made to make the health conditions of the various countries of
+                the continents more and more equitable.
+            </p>
+
+            <p>
+                It is also worth noting the decline in mortality rates in Africa and Asia over the years, which can be attributed to various
+                interventions and improvements in healthcare access. Conversely, Europe shows an increase in mortality rates around 2019, which
+                could be linked to a variety of factors, such as an aging population, changes in healthcare systems, or the impact of specific
+                health conditions. Further analysis is necessary to identify the specific drivers of these trends and inform targeted interventions
+                to address them. Overall, the boxplot effectively communicates complex mortality data and highlights important variations in mortality
+                trends across different regions and time periods.
+            </p>
+
+        </div>
+
+        <!-- BARPLOT OF MORTALITY RATE BY AGE -->
+        <div id="barplot-mortality-rate-age" class="chart"></div>
+        <div class="slider-container">
+            <div id="slider-barplot-mortality-rate-age" class="slider-index"></div>
+            <button id="barplot-play-pause" class="play-button"><i class="fa fa-play"></i></button>
+        </div>
+
+        <!-- COMMENT TO BOXPLOT -->
+        <div id="comment-barplot-mortality-rate-age" class="section">
+
+            <p>
+                The mortality rate by age group in each continent over time is an important indicator of the health of populations.
+                Looking at this grouped barplot, we can see that at the beginning of the time period, the mortality rate of all age groups is somehow
+                high with respect to the situation in our times. In particular, the mortality rate for children in age group 0-9 was higher in Africa,
+                Asia, Latin America, and Oceania compared to other age groups and continents.
+                However, as time goes on, we can see a significant decrease in mortality rates across all age groups and continents.
+                This decrease can be attributed to advances in medical technology, access to healthcare, and public health initiatives.
+            </p>
+
+            <p>
+                It's interesting to note that while the mortality rates for all age groups decreased, the age groups of 80-89 and 90+ show
+                an increase.
+                This is a symptom of an increasing value of life expectancy, indicating that people are living longer and dying for natural causes.
+                This is a positive trend and reflects improvements in healthcare and quality of life.
+                The increase of mortality rate in age group 70-79 iEurope and Northern America can suggest that people in developed continents are more
+                likely to live longer, as said before, but are also more likely to experience age-related health issues.
+            </p>
+
+            <p>
+                Overall, this grouped barplot highlights the progress that has been made in improving global health outcomes.
+                However, there are still significant disparities in mortality rates between continents: despite the general trend of decreasing mortality
+                rates, it is still concerning to see that the mortality rate in the 0-9 age group in Africa remains higher than in other continents.
+                This highlights the importance of continued efforts to improve healthcare access and disease prevention in Africa.
+            </p>
+
+        </div>
+        
     </div>
-
-    <!-- COMMENT TO BOXPLOT -->
-    <div id="boxplot-mortality-rate" class="section">
-
-        <p>
-            The boxplot of mortality rates across continents offers a clear and concise way to visualize changes in mortality over time.
-            One striking observation is the general decrease in mortality rates across all continents, reflecting progress made in public
-            health interventions and healthcare access globally. Additionally, there is a notable decrease in the variability of mortality
-            rates within each continent, indicating how an attempt has been made to make the health conditions of the various countries of
-            the continents more and more equitable.
-        </p>
-
-        <p>
-            It is also worth noting the decline in mortality rates in Africa and Asia over the years, which can be attributed to various
-            interventions and improvements in healthcare access. Conversely, Europe shows an increase in mortality rates around 2019, which
-            could be linked to a variety of factors, such as an aging population, changes in healthcare systems, or the impact of specific
-            health conditions. Further analysis is necessary to identify the specific drivers of these trends and inform targeted interventions
-            to address them. Overall, the boxplot effectively communicates complex mortality data and highlights important variations in mortality
-            trends across different regions and time periods.
-        </p>
-
-    </div>
-
-
     <!-- Put here the js for the chart -->
     <script src="js/boxplot-mortality-rate.js"></script>
+    <script src="js/barplot-mortality-rate-age.js"></script>
 
 </body>
 

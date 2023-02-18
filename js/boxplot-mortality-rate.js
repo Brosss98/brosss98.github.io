@@ -24,11 +24,6 @@ const svg_1 = d3.select(id_ref_1)
         .append("g")
         .attr("transform", `translate(${(1280-540)/2},${(120-(42*2))})`)
 
-var color;
-
-// Read the data and compute summary statistics for each species
-d3.dsv(";", "../data/mortality_rate.csv").then(function(data) {
-
     // Create a tooltip
     const tooltip_1 = d3.select(id_ref_1)
         .append("div")
@@ -41,6 +36,9 @@ d3.dsv(";", "../data/mortality_rate.csv").then(function(data) {
         .style("padding", "10px")
         .style("opacity", 0);
         
+// Read the data and compute summary statistics for each species
+d3.dsv(";", "../data/mortality_rate.csv").then(function(data) {
+     
     // max data assumed for the selected measure
     max_data = data.reduce((acc, el) => Math.max(acc, el.Value), -Infinity)
     
