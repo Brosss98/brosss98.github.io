@@ -20,7 +20,7 @@ svg_1.append("text")
     .attr("x", ((width_1 + (margin_1.left + margin_1.right + 15)) / 2))             
     .attr("y", -25)// 0 - ((height_1 - margin_1.top) / 2))
     .style("class", "h2")
-    .style("font-size", "14px")
+    .style("font-size", "12px")
     .attr("text-anchor", "middle")  
     .style("text-decoration", "underline")  
     .text("Life expectancy in coutries over years");
@@ -125,6 +125,10 @@ Promise.all([
                 .style("fill-opacity", "1.0")
                 .transition("selected")
                 .duration(300);
+
+                tooltip_1.style("top", (event.pageY - 10) + "px" )
+                .style("left", (event.pageX + 10) + "px");
+
                         // Appear tooltip
                         tooltip_1.transition("appear-box")
                         .duration(300)
@@ -132,7 +136,8 @@ Promise.all([
                         
                         // Tooltip content
                         tooltip_1.html("<span class='tooltiptext'>" + "<b>Country: " + d.properties.name +
-                        "</b><br>" + "Life expectancy (years): " + map.get(d.id) + "</span>");})
+                        "</b><br>" + "Year: " + year + 
+                        "<br>" + "Life expectancy (years): " + map.get(d.id) + "</span>");})
         }
 
          svg_1.selectAll("path")

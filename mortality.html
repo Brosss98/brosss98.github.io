@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <!-- To manage incompatibility with older version of Internet Explorer / Edge -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- To manage the text respect to the device of the user (mobile, tablet, pc, and so on) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Life expectancy in the world</title>
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Fira+Sans">
+    <script src="js/d3.v7.min.js"></script>
+    <script src="js/d3-simple-slider.min.js"></script>
+    <script src="js/init.js"></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="padding-header">
+        <h1>Life expectancy in the world: how is it going?</h1>
+        <h3>Data Visualization Final Project<br>Mario Medone</h3>
+    </header>
+
+    <!-- NAVIGATION MENU -->
+    <div id="myTopnav" class="topnav stickyNav">
+        <div class="content">
+            <a href="index.html">Home</a>
+            <a href="#" class="active">Mortality</a>
+            <a href="death-causes.html">Death causes</a>
+            <a href="health-GDP.html">Health GDP</a>
+            <a href="javascript:void(0);" class="icon" onclick="toggle_icon_menu_topnav()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main-content" class="content">
+    
+        <!-- FAST MORTALITY -->
+        <div id="fast-mortality" class="section">
+
+            <h2>Understanding Mortality: <br><span>A key indicator of public health</span></h2>
+            
+            <p>
+                Mortality is a critical indicator of public health, measuring the number of deaths in a population over a specific period.
+                Mortality rates can vary widely based on age, sex, and underlying health conditions, as well as broader social and economic
+                factors like access to healthcare, education, and environmental conditions.
+            </p>
+            
+            <p>
+                Visualizing mortality data through graphs and charts can help us to better understand patterns and trends in the data,
+                such as variations in mortality rates between different demographic groups or changes in mortality rates over time.
+                By analyzing mortality data, public health officials can identify risk factors for specific health conditions and develop
+                targeted interventions to reduce mortality rates and improve population health.
+            </p>
+            
+            <p>
+                Overall, mortality data is a critical tool for assessing the health of populations and guiding public health policy and
+                interventions.
+            </p>
+
+        </div>
+
+    <!-- BOXPLOT OF MORTALITY RATE -->
+    <div id="boxplot-mortality-rate" class="chart"></div>
+    <div class="slider-container">
+        <div id="slider-boxplot-mortality-rate" class="slider-index"></div>
+        <button id="boxplot-play-pause" class="play-button"><i class="fa fa-play"></i></button>
+    </div>
+
+    <!-- COMMENT TO BOXPLOT -->
+    <div id="boxplot-mortality-rate" class="section">
+
+        <p>
+            The boxplot of mortality rates across continents offers a clear and concise way to visualize changes in mortality over time.
+            One striking observation is the general decrease in mortality rates across all continents, reflecting progress made in public
+            health interventions and healthcare access globally. Additionally, there is a notable decrease in the variability of mortality
+            rates within each continent, indicating how an attempt has been made to make the health conditions of the various countries of
+            the continents more and more equitable.
+        </p>
+
+        <p>
+            It is also worth noting the decline in mortality rates in Africa and Asia over the years, which can be attributed to various
+            interventions and improvements in healthcare access. Conversely, Europe shows an increase in mortality rates around 2019, which
+            could be linked to a variety of factors, such as an aging population, changes in healthcare systems, or the impact of specific
+            health conditions. Further analysis is necessary to identify the specific drivers of these trends and inform targeted interventions
+            to address them. Overall, the boxplot effectively communicates complex mortality data and highlights important variations in mortality
+            trends across different regions and time periods.
+        </p>
+
+    </div>
+
+
+    <!-- Put here the js for the chart -->
+    <script src="js/boxplot-mortality-rate.js"></script>
+
+</body>
+
+</html>
