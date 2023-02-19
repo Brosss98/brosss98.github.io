@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <!-- To manage incompatibility with older version of Internet Explorer / Edge -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- To manage the text respect to the device of the user (mobile, tablet, pc, and so on) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Life expectancy in the world</title>
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Fira+Sans">
+    <script src="js/d3.v7.min.js"></script>
+    <script src="js/d3-simple-slider.min.js"></script>
+    <script src="js/init.js"></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="padding-header">
+        <h1>Life expectancy in the world: how is it going?</h1>
+        <h3>Data Visualization Final Project<br>Mario Medone</h3>
+    </header>
+
+    <!-- NAVIGATION MENU -->
+    <div id="myTopnav" class="topnav stickyNav">
+        <div class="content">
+            <a href="index.html">Home</a>
+            <a href="mortality.html">Mortality</a>
+            <a href="#" class="active">Death causes</a>
+            <a href="health-GDP.html">Health GDP</a>
+            <a href="javascript:void(0);" class="icon" onclick="toggle_icon_menu_topnav()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main-content" class="content">
+    
+        <!-- FAST DEATH CAUSES -->
+        <div id="fast-death-causes" class="section">
+
+            <h2>The silent killers: <br><span>Exploring death causes and diseases</span></h2>
+            
+            <p>
+                Understanding the leading causes of death and diseases is crucial in assessing the health status of populations and identifying
+                areas for improvement. The link between death causes, diseases, and life expectancy is a complex and multifaceted topic that
+                requires careful analysis and interpretation of data. By examining trends and patterns in death causes and diseases across
+                different regions and time periods, we can gain valuable insights into the factors that influence health outcomes and help
+                inform public health policies and interventions.
+            </p>
+
+        </div>
+
+        <!-- STACKED PERCENTAGE AREA CHART OF DEATH CAUSES -->
+        <div id="stacked-area-death-causes" class="chart"></div>
+        <div class="text-center" style="margin-top: 20px">
+            Select the continent you want to visualize: <select id="selection-continent" class="selectionBox" name="Continent" onchange="drawContinent()"></select>
+        </div>
+
+
+        <!-- COMMENT TO BOXPLOT -->
+        <div id="comment-stacked-area-death-causes" class="section">
+
+            <p>
+                This stacked percentage area chart provides a comprehensive view of the distribution of communicable, noncommunicable, and injuries
+                causes of death across different continents over time. The chart highlights that noncommunicable causes of death are the most
+                frequent across all continents, which is consistent with global trends. However, there are some notable differences in the
+                distribution of communicable and injuries causes of death between continents.
+            </p>
+
+            <p>
+                In particular, Africa stands out as having a significantly higher percentage of communicable causes of death compared to other
+                continents. This is likely due to a range of factors such as limited access to healthcare, poor sanitation and hygiene, and
+                exposure to infectious diseases. However, the chart also shows that this percentage is decreasing over time, which suggests that
+                efforts to combat communicable diseases in Africa are yielding positive results. This is a promising trend that highlights the
+                importance of continued investment in healthcare infrastructure and disease prevention programs in Africa.
+            </p>
+
+            <p>
+                Injuries causes of death, on the other hand, have a similar level of distribution across all continents over time. This highlights
+                the need for continued efforts to address issues such as road safety, workplace safety, and violence prevention, which are major
+                contributors to injuries causes of death globally.
+            </p>
+
+            <p>
+                Overall, this stacked percentage area chart provides valuable insights into the trends and patterns of causes of death across
+                different continents over time. The chart can be used to inform policies and programs aimed at improving health outcomes and
+                reducing mortality rates worldwide.
+            </p>
+
+        </div>
+
+        <!-- RADAR CHART OF NONCOMMUNICABLE DISEASES -->
+        <!-- <div id="radarchart-death-causes" class="chart"></div>
+        <div class="slider-container">
+            <div id="slider-radarchart-death-causes" class="slider-index"></div>
+            <button id="radarchart-play-pause" class="play-button"><i class="fa fa-play"></i></button>
+        </div> -->
+
+        <!-- COMMENT TO RADARCHART -->
+        <!-- <div id="comment-radarchart-death-causes" class="section">
+
+            <p>
+                
+            </p>
+
+        </div> -->
+        
+    </div>
+    <!-- Put here the js for the chart -->
+    <script src="js/stacked-area-death-causes.js"></script>
+    <!-- <script src="js/radarchart-death-causes.js"></script> -->
+
+</body>
+
+</html>
