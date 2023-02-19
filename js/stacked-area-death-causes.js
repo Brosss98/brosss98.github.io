@@ -88,7 +88,7 @@ d3.csv("../data/death_by_cause_percentage.csv").then( function(data){
             .style("text-anchor", "center")
             .style("font-family", "Fira Sans, sans-serif")
             .style("font-size", "12px")
-            .style("color", function(d) { if(d%2 != 0) return "white" });
+            .style("color", function(d) { if(d%5 != 0) return "white" });
         
     // Add the y-axis to your chart
     svg_1.append("g")

@@ -17,7 +17,7 @@ const svg_1 = d3.select(id_ref_1)
 
 // Title
 svg_1.append("text")
-    .attr("x", ((width_1 + (margin_1.left + margin_1.right + 15)) / 2))             
+    .attr("x", ((width_1 + (margin_1.left + margin_1.right)) / 2))             
     .attr("y", -25)// 0 - ((height_1 - margin_1.top) / 2))
     .style("class", "h2")
     .style("font-size", "12px")
@@ -34,7 +34,7 @@ var gTime_1 = d3.select("#slider-map-life-expectancy-world")
     .attr("preserveAspectRatio", "xMidYMid meet")
     .attr("viewBox", '0 0 1280 80')
     .append("g")
-    .attr("transform", `translate(${(1280-540)/2+15},${(120-(42*2))})`)
+    .attr("transform", `translate(${(1280-540)/2},${(120-(42*2))})`)
 
 // Add color legend
 shapeWidthLegend_1 = 30;

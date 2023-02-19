@@ -383,7 +383,7 @@ svg_1.selectAll("rect")
         .style("class", "h2")
         .style("font-size", "16px")
         .attr("transform", "rotate(-90)")
-        .text("Mortality rate (death per 100k population)");
+        .text("Mortality rate (deaths per 100k population)");
         //.text(y_label_1[subgroups_1.indexOf(measureHeading_1)]);
 
 

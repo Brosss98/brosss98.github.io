@@ -257,7 +257,7 @@ d3.dsv(";", "../data/mortality_rate_age.csv").then( function(data) {
         .style("class", "h2")
         .style("font-size", "16px")
         .attr("transform", "rotate(-90)")
-        .text("Mortality rate (death per 100k population)");
+        .text("Mortality rate (deaths per 100k population)");
 
     var legend_3 = svg_3.join("g")
         .selectAll("legend_3")
