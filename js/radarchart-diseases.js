@@ -19,9 +19,9 @@ const svg_2 = d3.select(id_ref_2)
     var gTime_2 = d3.select("#slider-radarchart-diseases")
     .append("svg")
     .attr("preserveAspectRatio", "xMidYMid meet")
-    .attr("viewBox", '0 0 1024 80')
+    .attr("viewBox", '0 0 1200 80')
     .append("g")
-    .attr("transform", `translate(${(1024-540)/2},${(120-(42*2))})`)
+    .attr("transform", `translate(${(1200-540)/2},${(120-(42*2))})`)
 
 // var groupBy = function(xs, key) {
 //     return xs.reduce(function(rv, x) {

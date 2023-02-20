@@ -20,9 +20,9 @@ const svg_1 = d3.select(id_ref_1)
     var gTime_1 = d3.select("#slider-boxplot-mortality-rate")
         .append("svg")
         .attr("preserveAspectRatio", "xMidYMid meet")
-        .attr("viewBox", '0 0 1024 80')
+        .attr("viewBox", '0 0 1200 80')
         .append("g")
-        .attr("transform", `translate(${(1024-540)/2},${(120-(42*2))})`)
+        .attr("transform", `translate(${(1200-540)/2},${(120-(42*2))})`)
 
     // Create a tooltip
     const tooltip_1 = d3.select(id_ref_1)

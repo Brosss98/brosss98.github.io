@@ -37,11 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Disable scrolling and link clicks
     document.body.classList.add('popup-open');
     document.body.style.overflow = 'hidden';
-    document.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', (event) => {
-            event.preventDefault();
-        });
-    });
 
     // Hide popup when close button is clicked
     closePopupBtn.addEventListener('click', () => {
@@ -50,11 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // Re-enable scrolling and link clicks
         document.body.classList.remove('popup-open');
         document.body.style.overflow = 'auto';
-        document.querySelectorAll('a').forEach(link => {
-            link.removeEventListener('click', (event) => {
-            event.preventDefault();
-            });
-        });
 
         setTimeout(() => {
             popupContainer.style.display = 'none';
