@@ -25,6 +25,48 @@ var groupBy = function(xs, key) {
     }, {});
 };
 
+document.addEventListener('DOMContentLoaded', () => {
+    const popupContainer = document.querySelector('.popup-container');
+    const closePopupBtn = document.querySelector('.close-popup');
+
+    // Show popup
+    popupContainer.style.display = 'flex';
+    popupContainer.style.opacity = '0';
+    popupContainer.style.transition = 'opacity 0.5s';
+
+    // Disable scrolling and link clicks
+    document.body.classList.add('popup-open');
+    document.body.style.overflow = 'hidden';
+    document.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+        });
+    });
+
+    // Hide popup when close button is clicked
+    closePopupBtn.addEventListener('click', () => {
+        popupContainer.style.opacity = '0';
+
+        // Re-enable scrolling and link clicks
+        document.body.classList.remove('popup-open');
+        document.body.style.overflow = 'auto';
+        document.querySelectorAll('a').forEach(link => {
+            link.removeEventListener('click', (event) => {
+            event.preventDefault();
+            });
+        });
+
+        setTimeout(() => {
+            popupContainer.style.display = 'none';
+        }, 500);
+    });
+
+    // Show popup after a short delay
+    setTimeout(() => {
+        popupContainer.style.opacity = '1';
+    }, 1000);
+});
+
 // Possible other palette
 // const color = d3.scaleOrdinal().range(["#ff595e", "#ff924c", "#ffca3a", "#8ac926", "#1982c4", "#6a4c93", "#606470"])
 // const color = d3.scaleOrdinal().range(["#ff595e", "#ff924c", "#8ac926", "#1982c4", "#6a4c93", "#582f0e", "#606470"])

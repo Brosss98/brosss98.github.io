@@ -2,6 +2,41 @@
     box-sizing: border-box;
 }
 
+/* POP-UP STYLES */
+.popup-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    font-size: 14px;
+    z-index: 999;
+    display: none;
+}
+.popup {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+.close-popup {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+body.popup-open {
+    overflow: hidden;
+  }
+
 /** BODY **/
 body {
     font-family: "Fira Sans", sans-serif;
