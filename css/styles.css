@@ -205,12 +205,12 @@ p {
 /** LINKS **/
 /* unvisited link */
 p a:link {
-    color: #90e0ef;
+    color: #023e8a;
 }
   
   /* visited link */
 p a:visited {
-    color: #023e8a;
+    color: #90e0ef;
 }
   
   /* mouse over link */
