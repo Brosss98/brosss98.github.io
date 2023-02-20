@@ -1,7 +1,7 @@
 const id_ref_2 = "#radarchart-diseases"
 
 // Set the dimensions and margins of the graph
-const margin_2 = { top: 70, right: 20, bottom: 60, left: 20 },
+const margin_2 = { top: 70, right: 20, bottom: 70, left: 20 },
     width_2 = 1024 - margin_2.left - margin_2.right,
     height_2 = 680 - margin_2.top - margin_2.bottom;
     
@@ -19,9 +19,9 @@ const svg_2 = d3.select(id_ref_2)
     var gTime_2 = d3.select("#slider-radarchart-diseases")
     .append("svg")
     .attr("preserveAspectRatio", "xMidYMid meet")
-    .attr("viewBox", '0 0 1280 80')
+    .attr("viewBox", '0 0 1024 80')
     .append("g")
-    .attr("transform", `translate(${(1280-540)/2},${(120-(42*2))})`)
+    .attr("transform", `translate(${(1024-540)/2},${(120-(42*2))})`)
 
 // var groupBy = function(xs, key) {
 //     return xs.reduce(function(rv, x) {

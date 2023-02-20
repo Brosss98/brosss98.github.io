@@ -41,6 +41,16 @@ header h3 {
         margin-left: auto;
         margin-right: auto;
 }
+@media screen and (max-width: 479px){
+    .section {
+        padding-top: 0px !important;
+        margin-bottom: 20px !important;
+    }
+    .slider-container {
+        margin: 0px auto !important;
+        padding-bottom: 0px !important;
+    }
+}
 @media screen and (min-width: 480px) and (max-width: 767px) {
     .content {
         padding: 0px 30px;
@@ -48,6 +58,10 @@ header h3 {
     .section {
         padding-top: 0px !important;
         margin-bottom: 20px !important;
+    }
+    .slider-container {
+        margin: 0px auto !important;
+        padding-bottom: 0px !important;
     }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -58,14 +72,14 @@ header h3 {
         padding-top: 10px !important;
         margin-bottom: 30px !important;
     }
+    .slider-container {
+        margin: -10px auto !important;
+        padding-bottom: 30px !important;
+    }
 }
 @media screen and (min-width: 1024px) {
     .content {
         padding: 0px 50px;
-    }
-    .section {
-        padding-top: 20px !important;
-        margin-bottom: 40px !important;
     }
 }
 
@@ -281,7 +295,7 @@ div.img-description p {
     position: relative;
     margin: -20px auto;
     padding-bottom: 50px;
-  }
+}
   
 .slider-index {
     margin-bottom: 0px;

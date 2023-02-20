@@ -32,9 +32,9 @@ var parseDate = d3.timeParse("%Y")
 var gTime_1 = d3.select("#slider-map-life-expectancy-world")
     .append("svg")
     .attr("preserveAspectRatio", "xMidYMid meet")
-    .attr("viewBox", '0 0 1280 80')
+    .attr("viewBox", '0 0 1024 80')
     .append("g")
-    .attr("transform", `translate(${(1280-540)/2},${(120-(42*2))})`)
+    .attr("transform", `translate(${(1024-540)/2},${(120-(42*2))})`)
 
 // Add color legend
 shapeWidthLegend_1 = 30;

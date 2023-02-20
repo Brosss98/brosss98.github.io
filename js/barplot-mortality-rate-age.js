@@ -22,9 +22,9 @@ const svg_3 = d3.select(id_ref_3)
     var gTime_3 = d3.select("#slider-barplot-mortality-rate-age")
     .append("svg")
     .attr("preserveAspectRatio", "xMidYMid meet")
-    .attr("viewBox", '0 0 1280 80')
+    .attr("viewBox", '0 0 1024 80')
     .append("g")
-    .attr("transform", `translate(${(1280-540)/2},${(120-(42*2))})`)
+    .attr("transform", `translate(${(1024-540)/2},${(120-(42*2))})`)
 
     // Create a tooltip
     const tooltip_3 = d3.select(id_ref_3)
