@@ -232,8 +232,9 @@ svg_1.selectAll(".data-point")
             .delay(1);
 
         tooltip_1.html("<span class='tooltiptext'>" + "<b>Continent: " + d.Continent + "</b>" + 
+            "<br>" + "Region: " + d.Region + 
             "<br>" + "Year: " + d.Year + 
-            "<br>" + "Value: " + d.Value + "</span>")
+            "<br>" + "Mortality rate: " + (+d.Value).toFixed() + "</span>")
     })
 
     .on("mousemove", function(event, d) {
@@ -277,9 +278,9 @@ svg_1.selectAll("rect")
 
     tooltip_1.html("<span class='tooltiptext'>" + "<b>Continent: " + d.key + "</b>" + 
         "<br>" + "Year: " + year +
-        "<br>" + "Q1: " + d.q1.toFixed(2) + " - Q3: " + d.q3.toFixed(2) + 
-        "<br>" + "Mean: " + d.mean.toFixed(2) + 
-        "<br>" + "Median: " + d.median.toFixed(2) + "</span>")
+        "<br>" + "Q1: " + d.q1.toFixed() + " - Q3: " + d.q3.toFixed() + 
+        "<br>" + "Mean: " + d.mean.toFixed() + 
+        "<br>" + "Median: " + d.median.toFixed() + "</span>")
 })
 
 .on("mousemove", function(event, d) {

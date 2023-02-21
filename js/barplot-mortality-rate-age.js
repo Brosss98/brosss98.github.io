@@ -148,7 +148,7 @@ d3.dsv(";", "../data/mortality_rate_age.csv").then( function(data) {
 
                 tooltip_3.html("<span class='tooltiptext'>" + "<b>Continent: " + d.Continent + "</b>" + 
                 "<br>" + "Year: " + d.Year +
-                "<br>" + "Death rate: " + parseFloat(d.Value).toFixed(2) + "</span>")
+                "<br>" + "Mortality rate: " + parseFloat(d.Value).toFixed() + "</span>")
         })
 
         .on("mousemove", function(event, d) {

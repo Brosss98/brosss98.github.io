@@ -103,9 +103,9 @@ d3.dsv(";", '../data/health_gdp.csv').then(function(data) {
     
     var min_Z = 1500
     var max_Z = 1500000000
-    z = d3.scaleLog()
+    z = d3.scalePow().exponent(0.3)
         .domain([min_Z, max_Z])
-        .range([10, 40])
+        .range([1, 40])
 
     function first_draw(row) {
         return +row.Year === 2000
@@ -117,7 +117,7 @@ d3.dsv(";", '../data/health_gdp.csv').then(function(data) {
     .selectAll(".bubble")
     .data(data_first)
     .join("circle")
-        .attr("class", d => `class${continents.indexOf(d.Continent)} class-reg${regions.indexOf(d.Region)}`)
+        .attr("class", d => `class${continents.indexOf(d.Continent)} class-reg${regions.indexOf(d.Region)} ${d.Code}`)
         .attr("cx", (d) => x(d.HealthGDP))
         .attr("cy", height_1)
         .attr("r", 0)
@@ -252,19 +252,19 @@ d3.dsv(";", '../data/health_gdp.csv').then(function(data) {
         .attr("class", "legend_bubble")
         .attr("transform", "translate(" + (width_1 - margin_1.right/2) + "," + (height_1 - 150) + ")");
 
-    const legendScale_bubble = d3.scaleLog()
+    const legendScale_bubble = d3.scalePow().exponent(0.3)
         .domain([1500, 1500000000])
-        .range([10, 40]);
+        .range([1, 40]);
 
-    const legendSize_bubble = d3.scaleLog()
+    const legendSize_bubble = d3.scalePow().exponent(0.3)
         .domain([1500, 1500000000])
-        .range([10, 40]);
+        .range([1, 40]);
 
     const legendAxis_bubble = d3.axisBottom(legendScale_bubble)
       .ticks(4, ",.1s");
 
     const legendCircles_bubble = legend_bubble.selectAll("circle-bubble")
-        .data([1500, 150000, 150000000, 1500000000])
+        .data([15000, 1500000, 150000000, 1500000000])
         .enter()
         .append("circle")
         .attr("cx", 0)
@@ -274,7 +274,7 @@ d3.dsv(";", '../data/health_gdp.csv').then(function(data) {
         .attr("stroke", "black");
 
     const legendLabels_bubble = legend_bubble.selectAll("text_bubble")
-        .data([1500, 150000, 150000000, 1500000000])
+        .data([15000, 1500000, 150000000, 1500000000])
         .enter()
         .append("text")
         .attr("x", 50)
@@ -351,7 +351,8 @@ function drawBubble(year) {
     
 
     data_year.forEach(el => {
-        svg_1.selectAll(`.class-reg${regions.indexOf(el.Region)}`)
+        //svg_1.selectAll(`.class-reg${regions.indexOf(el.Region)}`)
+        svg_1.selectAll(`.${el.Code}`)
             .transition()
             .duration(300)
             .attr("cx", x(+el.HealthGDP))
@@ -364,7 +365,7 @@ function drawBubble(year) {
 
     // MouseOver
     .on("mouseover", function (event, d) {
-        
+
         // Select all circles
         svg_1.selectAll("circle")
             .transition("selected")
@@ -374,6 +375,7 @@ function drawBubble(year) {
 
         // Select all the circle with this specific class (tree species)
         idx_d = continents.indexOf(d.Continent);
+        
         svg_1.selectAll(`.class${idx_d}`)
             .transition("selected")
             .duration(300)
@@ -390,10 +392,16 @@ function drawBubble(year) {
             // we move between near boxes (horizontally)
             .delay(10);
 
-        tooltip_1.html("<span class='tooltiptext'>" + "<b>Region: " + d.Region + "</b>" +
-            "<br>" + "<b>Health expenditure (% of GDP): " + d.HealthGDP + "</b>" +
-            "<br>" + `${measureHeading_1.replaceAll("_", " ")}: ` + (+d[measureHeading_1]).toFixed(2) + 
-            "<br>" + "Population: " + d.Population + "</span>");
+        data_year.forEach(el => {
+            if(el.Code == d.Code)
+                datum = el
+        })
+
+        tooltip_1.html("<span class='tooltiptext'>" + "<b>Region: " + datum.Region + "</b>" +
+            "<br>" + "<b>Health expenditure (% of GDP): " + datum.HealthGDP + "</b>" +
+            "<br>" + `${measureHeading_1.replaceAll("_", " ")}: ` + (+datum[measureHeading_1]).toFixed(2) + 
+            "<br>" + "Population: " + (+datum.Population).toFixed(0) + " (~" + d3.format(",.2s")((+datum.Population).toFixed(0)) + ")" +
+            "<br>" + "Year: " + datum.Year + "</span>");
     })
 
     .on("mousemove", function(event, d) {

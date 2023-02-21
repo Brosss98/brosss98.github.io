@@ -128,7 +128,7 @@ d3.csv("../../data/diseases_rates.csv").then( function (data)
         byContinent.forEach(el => {
             svg_2.selectAll(`.polygon-${continent_2.indexOf(el[0])}`)
             .data( [ el[1] ] )
-            .attr("points", function(d){console.log(d);
+            .attr("points", function(d){
                 return d.reduce((acc, el) => acc + xCoord(el.Value, disease.indexOf(el.Disease)) + "," + yCoord(el.Value, disease.indexOf(el.Disease)) + " ", "");
             })
             .attr("stroke", (d => color_2(el[0])))
@@ -234,7 +234,6 @@ d3.csv("../../data/diseases_rates.csv").then( function (data)
             .style("fill-opacity", 1.0);
             
         class_of_interest = event.currentTarget.classList[0]
-        console.log(class_of_interest)
 
         svg_2.selectAll(`.${class_of_interest}`)
             .transition()

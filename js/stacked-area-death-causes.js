@@ -196,7 +196,7 @@ function drawContinent() {
     svg_1.selectAll("path")
     // MouseOver
     .on("mouseover", function (event, d) {
-        console.log(event)
+
         d3.select(event.currentTarget)
             .transition("selected")
                 .duration(300)
@@ -217,7 +217,7 @@ function drawContinent() {
             // Added to control the fact that the tooltip disappear if
             // we move between near boxes (horizontally)
             .delay(10);
-        console.log(d)
+
         tooltip_1.html("<span class='tooltiptext'>" + "<b>Cause: " + d.key + "</b></span>")
     })
 

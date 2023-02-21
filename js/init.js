@@ -25,37 +25,40 @@ var groupBy = function(xs, key) {
     }, {});
 };
 
-document.addEventListener('DOMContentLoaded', () => {
-    const popupContainer = document.querySelector('.popup-container');
-    const closePopupBtn = document.querySelector('.close-popup');
+// Pop-up information on graphs only on the index.html page
+if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+    document.addEventListener('DOMContentLoaded', () => {
+        const popupContainer = document.querySelector('.popup-container');
+        const closePopupBtn = document.querySelector('.close-popup');
 
-    // Show popup
-    popupContainer.style.display = 'flex';
-    popupContainer.style.opacity = '0';
-    popupContainer.style.transition = 'opacity 0.5s';
-
-    // Disable scrolling and link clicks
-    document.body.classList.add('popup-open');
-    document.body.style.overflow = 'hidden';
-
-    // Hide popup when close button is clicked
-    closePopupBtn.addEventListener('click', () => {
+        // Show popup
+        popupContainer.style.display = 'flex';
         popupContainer.style.opacity = '0';
+        popupContainer.style.transition = 'opacity 0.5s';
 
-        // Re-enable scrolling and link clicks
-        document.body.classList.remove('popup-open');
-        document.body.style.overflow = 'auto';
+        // Disable scrolling and link clicks
+        document.body.classList.add('popup-open');
+        document.body.style.overflow = 'hidden';
 
+        // Hide popup when close button is clicked
+        closePopupBtn.addEventListener('click', () => {
+            popupContainer.style.opacity = '0';
+
+            // Re-enable scrolling and link clicks
+            document.body.classList.remove('popup-open');
+            document.body.style.overflow = 'auto';
+
+            setTimeout(() => {
+                popupContainer.style.display = 'none';
+            }, 500);
+        });
+
+        // Show popup after a short delay
         setTimeout(() => {
-            popupContainer.style.display = 'none';
-        }, 500);
+            popupContainer.style.opacity = '1';
+        }, 1000);
     });
-
-    // Show popup after a short delay
-    setTimeout(() => {
-        popupContainer.style.opacity = '1';
-    }, 1000);
-});
+};
 
 // Possible other palette
 // const color = d3.scaleOrdinal().range(["#ff595e", "#ff924c", "#ffca3a", "#8ac926", "#1982c4", "#6a4c93", "#606470"])
